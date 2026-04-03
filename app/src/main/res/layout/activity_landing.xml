@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- 🔵 BACKGROUND IMAGE (NO STRETCH) -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/d0"
+        android:scaleType="centerCrop" />
+
+    <!-- 🌑 GRADIENT OVERLAY -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_overlay" />
+
+    <!-- 📱 CONTENT -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- PUSH CONTENT DOWN -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- TITLE -->
+
+        <!-- DESCRIPTION -->
+
+        <TextView
+            android:id="@+id/tvTitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="-150dp"
+            android:layout_marginBottom="10dp"
+            android:text="NeuroCare"
+            android:textColor="#2e569d"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvTitle2"
+            android:layout_width="280dp"
+            android:layout_marginLeft="20dp"
+            android:layout_height="wrap_content"
+            android:text="AI-powered Alzheimer’s risk assessment with medical-grade accuracy and insights."
+            android:textColor="#2e569d"
+            android:textSize="16sp"
+
+            android:layout_marginBottom="20dp"/>
+
+        <!-- BUTTON ROW -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogin"
+                android:layout_width="150dp"
+                android:layout_height="55dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginTop="10dp"
+                android:text="Login"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:background="@drawable/btn_rounded"
+                app:cornerRadius="10dp"
+                app:backgroundTint="@null"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSignup"
+                android:layout_width="150dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="10dp"
+                android:text="Sign Up"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:background="@drawable/btn_rounded"
+                app:cornerRadius="10dp"
+                app:backgroundTint="@null"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

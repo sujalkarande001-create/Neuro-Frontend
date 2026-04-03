@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/tools"
+        app:ignore="NamespaceTypo">
+
+        <!-- BACKGROUND IMAGE -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/d6"
+            android:scaleType="centerCrop"/>
+
+        <!-- GRADIENT OVERLAY -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient_overlay"/>
+
+        <!-- CENTERED CONTENT -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- TRANSPARENT CARD -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    card_view:cardCornerRadius="22dp"
+                    card_view:cardElevation="0dp"
+                    card_view:cardBackgroundColor="@android:color/transparent"
+                    android:layout_gravity="center">
+
+                    <!-- Inner semi-transparent layout -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="20dp"
+                        android:background="#80FFFFFF"> <!-- 50% transparent white -->
+
+                        <!-- PATIENT NAME -->
+                        <TextView
+                            android:id="@+id/tvPatientName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Patient: "
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="#2e569d"
+                            android:layout_marginBottom="12dp"
+                            android:gravity="center"/>
+
+                        <!-- PREDICTION -->
+                        <TextView
+                            android:id="@+id/tvPrediction"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Prediction: "
+                            android:textSize="20sp"
+                            android:textStyle="bold"
+                            android:textColor="#2e569d"
+                            android:layout_marginBottom="10dp"
+                            android:gravity="center"/>
+
+                        <!-- CONFIDENCE -->
+                        <TextView
+                            android:id="@+id/tvConfidence"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Confidence: "
+                            android:textSize="18sp"
+                            android:textColor="#546E7A"
+                            android:layout_marginBottom="20dp"
+                            android:gravity="center"/>
+
+                        <!-- BUTTONS -->
+                        <!-- BUTTON: Check Another Patient -->
+                        <Button
+                            android:id="@+id/btnAnother"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:text="Check Another Patient"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/btn_rounded"
+                            android:layout_marginBottom="8dp"/>
+
+                        <Button
+                            android:id="@+id/btnViewHistory"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:text="View Patient History"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/btn_rounded"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </FrameLayout>

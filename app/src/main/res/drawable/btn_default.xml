@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Background -->
+
+    <!-- Slightly rounded (or use 0dp for perfect square) -->
+    <corners android:radius="7dp"/>
+
+    <!-- Visible Border -->
+
+</shape>

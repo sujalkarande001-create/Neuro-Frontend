@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "74300590067",
+    "project_id": "miniv1-b45bc",
+    "storage_bucket": "miniv1-b45bc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:74300590067:android:07444ee54d9f1e807ab486",
+        "android_client_info": {
+          "package_name": "com.example.minivone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAF_y-hZFC9fxBJYuZ4WXOUNuVk2TprBY4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

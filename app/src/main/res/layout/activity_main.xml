@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- BACKGROUND IMAGE -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/d6"
+        android:scaleType="centerCrop"
+        tools:ignore="ContentDescription" />
+
+    <!-- GRADIENT OVERLAY -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_overlay"/>
+
+    <!-- CENTERED CONTENT -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- TRANSPARENT CARD -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="22dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@android:color/transparent"
+                android:layout_gravity="center">
+
+                <!-- Inner semi-transparent layout -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:background="#80FFFFFF"> <!-- 50% transparent white -->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Patient Information"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="#263238"
+                        android:layout_marginBottom="14dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"/>
+
+                    <!-- NAME -->
+                    <EditText
+                        android:id="@+id/etName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Patient Name"
+                        android:background="@drawable/edittext_bg"
+                        android:padding="14dp"
+                        android:textColor="#2e569d"
+                        android:layout_marginBottom="10dp"
+                        android:importantForAutofill="no"
+                        android:inputType="textPersonName" />
+
+                    <!-- AGE -->
+                    <EditText
+                        android:id="@+id/etAge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Age"
+                        android:textColor="#2e569d"
+                        android:inputType="number"
+                        android:background="@drawable/edittext_bg"
+                        android:padding="14dp"
+                        android:layout_marginBottom="10dp"
+                        android:importantForAutofill="no" />
+
+                    <!-- GENDER -->
+                    <EditText
+                        android:id="@+id/etGender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Gender (Male/Female)"
+                        android:background="@drawable/edittext_bg"
+                        android:padding="14dp"
+                        android:textColor="#2e569d"
+                        android:layout_marginBottom="10dp"
+                        android:importantForAutofill="no"
+                        android:inputType="text" />
+
+                    <!-- EDUCATION -->
+                    <EditText
+                        android:id="@+id/etEdu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Years of Education Completed"
+                        android:inputType="number"
+                        android:background="@drawable/edittext_bg"
+                        android:padding="14dp"
+                        android:textColor="#2e569d"
+                        android:layout_marginBottom="10dp"
+                        android:importantForAutofill="no" />
+
+                    <!-- APOE4 -->
+                    <EditText
+                        android:id="@+id/etApoe4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="APOE4 (0,1,2)"
+                        android:inputType="number"
+                        android:background="@drawable/edittext_bg"
+                        android:padding="14dp"
+                        android:textColor="#2e569d"
+                        android:layout_marginBottom="16dp"
+                        android:importantForAutofill="no" />
+
+                    <!-- PREDICT BUTTON -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnPredict"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Predict Alzheimer Risk"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/btn_rounded"
+                        app:backgroundTint="@null"
+                        app:cornerRadius="10dp"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnHistory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="View Patient History"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:background="@drawable/btn_rounded"
+                        app:backgroundTint="@null"
+                        app:cornerRadius="10dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

@@ -1,0 +1,212 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- BACKGROUND IMAGE -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/d5"
+        android:scaleType="centerCrop" />
+
+    <!-- GRADIENT OVERLAY -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_overlay" />
+
+    <!-- MAIN CONTENT -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- HEADER SECTION -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="30dp">
+
+            <TextView
+                android:id="@+id/titleHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alzheimer’s Disease \nPrediction"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:layout_marginTop="135dp"
+                android:textColor="#2e569d" />
+
+            <TextView
+                android:id="@+id/subTitleHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Predict Alzheimer’s Disease early using patient data and machine learning."
+                android:textSize="15sp"
+                android:textColor="#2e569d"
+                android:layout_marginTop="18dp"/>
+        </LinearLayout>
+
+        <!-- CARD SECTION -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="85dp"
+            android:orientation="vertical">
+
+            <!-- ROW 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- CARD 1 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardCheckAlzheimer"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:layout_margin="6dp"
+                    card_view:cardCornerRadius="16dp"
+                    card_view:cardBackgroundColor="#bbe8ff"
+                    card_view:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/brain" />
+
+                        <TextView
+                            android:text="Check Alzheimer"
+                            android:textColor="#2e569d"
+                            android:textSize="16sp"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:gravity="center"
+                            android:layout_marginTop="6dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- CARD 2 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewHistory"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:layout_margin="6dp"
+                    card_view:cardCornerRadius="16dp"
+                    card_view:cardBackgroundColor="#bbe8ff"
+                    card_view:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/history" />
+
+                        <TextView
+                            android:text="View History"
+                            android:textColor="#2e569d"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="6dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <!-- ROW 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <!-- CARD 3 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardProfile"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:layout_margin="6dp"
+                    card_view:cardCornerRadius="16dp"
+                    card_view:cardBackgroundColor="#bbe8ff"
+                    card_view:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/profile" />
+
+                        <TextView
+                            android:text="Profile"
+                            android:textColor="#2e569d"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="6dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- CARD 4 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardSignOut"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="1"
+                    android:layout_margin="6dp"
+                    card_view:cardCornerRadius="16dp"
+                    card_view:cardBackgroundColor="#bbe8ff"
+                    card_view:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/signout" />
+
+                        <TextView
+                            android:text="Sign Out"
+                            android:textColor="#2e569d"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_marginTop="6dp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
