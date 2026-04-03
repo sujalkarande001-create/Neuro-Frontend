@@ -1,4 +1,4 @@
-**🧠 Alzheimer’s Disease Prediction System
+**🧠 Alzheimer Disease Prediction System
 **Overview****
 
 This project is a machine learning-based system designed to predict the likelihood of Alzheimer’s Disease (AD) using patient data such as age, gender, education, and genetic factors (APOE4).
