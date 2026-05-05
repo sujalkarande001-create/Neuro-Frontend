@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         prefManager = new PrefManage(this);
 
-        // ❌ REMOVE AUTO LOGIN BLOCK (IMPORTANT)
+
 
         loginButton.setOnClickListener(v -> {
 

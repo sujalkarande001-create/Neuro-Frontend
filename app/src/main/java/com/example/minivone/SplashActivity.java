@@ -25,7 +25,7 @@ public class SplashActivity extends AppCompatActivity {
         player = new ExoPlayer.Builder(this).build();
         playerView.setPlayer(player);
 
-        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.d4);
+        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.d5);
         MediaItem mediaItem = MediaItem.fromUri(uri);
 
         player.setMediaItem(mediaItem);

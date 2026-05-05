@@ -19,7 +19,7 @@
         android:layout_height="match_parent"
         android:background="@drawable/gradient_overlay"/>
 
-    <!-- CENTERED CONTENT -->
+    <!-- CONTENT -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -32,23 +32,21 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <!-- TRANSPARENT CARD -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="22dp"
                 app:cardElevation="0dp"
-                app:cardBackgroundColor="@android:color/transparent"
-                android:layout_gravity="center">
+                app:cardBackgroundColor="@android:color/transparent">
 
-                <!-- Inner semi-transparent layout -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:padding="20dp"
-                    android:background="#80FFFFFF"> <!-- 50% transparent white -->
+                    android:background="#80FFFFFF">
 
+                    <!-- TITLE -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -57,8 +55,7 @@
                         android:textStyle="bold"
                         android:textColor="#263238"
                         android:layout_marginBottom="14dp"
-                        android:layout_gravity="center"
-                        android:gravity="center"/>
+                        android:layout_gravity="center"/>
 
                     <!-- NAME -->
                     <EditText
@@ -70,7 +67,6 @@
                         android:padding="14dp"
                         android:textColor="#2e569d"
                         android:layout_marginBottom="10dp"
-                        android:importantForAutofill="no"
                         android:inputType="textPersonName" />
 
                     <!-- AGE -->
@@ -83,21 +79,7 @@
                         android:inputType="number"
                         android:background="@drawable/edittext_bg"
                         android:padding="14dp"
-                        android:layout_marginBottom="10dp"
-                        android:importantForAutofill="no" />
-
-                    <!-- GENDER -->
-                    <EditText
-                        android:id="@+id/etGender"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Gender (Male/Female)"
-                        android:background="@drawable/edittext_bg"
-                        android:padding="14dp"
-                        android:textColor="#2e569d"
-                        android:layout_marginBottom="10dp"
-                        android:importantForAutofill="no"
-                        android:inputType="text" />
+                        android:layout_marginBottom="10dp" />
 
                     <!-- EDUCATION -->
                     <EditText
@@ -109,8 +91,7 @@
                         android:background="@drawable/edittext_bg"
                         android:padding="14dp"
                         android:textColor="#2e569d"
-                        android:layout_marginBottom="10dp"
-                        android:importantForAutofill="no" />
+                        android:layout_marginBottom="10dp" />
 
                     <!-- APOE4 -->
                     <EditText
@@ -122,21 +103,43 @@
                         android:background="@drawable/edittext_bg"
                         android:padding="14dp"
                         android:textColor="#2e569d"
-                        android:layout_marginBottom="16dp"
-                        android:importantForAutofill="no" />
+                        android:layout_marginBottom="16dp" />
 
-                    <!-- PREDICT BUTTON -->
+                    <!-- ✅ GENDER AT LAST -->
+                    <RadioGroup
+                        android:id="@+id/radioGender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="16dp">
+
+                        <RadioButton
+                            android:id="@+id/rbMale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Male"
+                            android:textColor="#2e569d"/>
+
+                        <RadioButton
+                            android:id="@+id/rbFemale"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Female"
+                            android:textColor="#2e569d"
+                            android:layout_marginStart="20dp"/>
+                    </RadioGroup>
+
+                    <!-- BUTTONS -->
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/btnPredict"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Predict Alzheimer Risk"
                         android:textColor="#FFFFFF"
-                        android:textSize="16sp"
-                        android:layout_marginBottom="8dp"
                         android:background="@drawable/btn_rounded"
                         app:backgroundTint="@null"
-                        app:cornerRadius="10dp"/>
+                        app:cornerRadius="10dp"
+                        android:layout_marginBottom="8dp"/>
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/btnHistory"
@@ -144,7 +147,6 @@
                         android:layout_height="wrap_content"
                         android:text="View Patient History"
                         android:textColor="#FFFFFF"
-                        android:textSize="15sp"
                         android:background="@drawable/btn_rounded"
                         app:backgroundTint="@null"
                         app:cornerRadius="10dp"/>

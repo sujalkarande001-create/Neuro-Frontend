@@ -3,20 +3,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- BACKGROUND IMAGE -->
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/d2"
         android:scaleType="centerCrop" />
 
-    <!-- GRADIENT -->
+
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/gradient_overlay" />
 
-    <!-- LOGIN TITLE (SEPARATE LAYOUT) -->
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -36,7 +37,7 @@
             android:textColor="#2e569d"/>
     </LinearLayout>
 
-    <!-- LOGIN FORM -->
+
     <LinearLayout
         android:layout_marginTop="70dp"
         android:layout_width="match_parent"

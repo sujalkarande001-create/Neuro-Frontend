@@ -5,6 +5,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,11 +19,11 @@ import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText etName, etAge, etGender, etEdu, etApoe4;
+    EditText etName, etAge, etEdu, etApoe4;
+    RadioGroup radioGender;
     Button btnPredict, btnHistory;
 
-//    String URL = "http://192.168.1.10:5000/predict";
-        String URL= "https://neuro-backend-hdnb.onrender.com/predict";
+    String URL= "https://neuro-backend-hdnb.onrender.com/predict";
     DatabaseHelper dbHelper;
 
     @Override
@@ -33,9 +34,9 @@ public class MainActivity extends AppCompatActivity {
 
         etName = findViewById(R.id.etName);
         etAge = findViewById(R.id.etAge);
-        etGender = findViewById(R.id.etGender);
         etEdu = findViewById(R.id.etEdu);
         etApoe4 = findViewById(R.id.etApoe4);
+        radioGender = findViewById(R.id.radioGender);
 
         btnPredict = findViewById(R.id.btnPredict);
         btnHistory = findViewById(R.id.btnHistory);
@@ -53,21 +54,30 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        // Clear fields for new patient
         etName.setText("");
         etAge.setText("");
-        etGender.setText("");
         etEdu.setText("");
         etApoe4.setText("");
+        radioGender.clearCheck();
     }
 
     private void predict() {
 
         String name = etName.getText().toString();
         String age = etAge.getText().toString();
-        String gender = etGender.getText().toString();
         String edu = etEdu.getText().toString();
         String apoe4 = etApoe4.getText().toString();
+
+        String gender;
+        int selectedId = radioGender.getCheckedRadioButtonId();
+
+        if (selectedId == R.id.rbMale) {
+            gender = "Male";
+        } else if (selectedId == R.id.rbFemale) {
+            gender = "Female";
+        } else {
+            gender = "";
+        }
 
         if(name.isEmpty() || age.isEmpty() || gender.isEmpty() || edu.isEmpty() || apoe4.isEmpty()){
             Toast.makeText(this,"Please fill all fields",Toast.LENGTH_SHORT).show();
